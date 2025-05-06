@@ -14,7 +14,16 @@ const Header = ({ children }) => {
 
   return (
     <AppBar position="static" color="primary" elevation={2}>
-      <Toolbar sx={{ display: 'flex', justifyContent: 'space-between' }}>
+      <Toolbar 
+          sx={{
+          display: 'flex',
+          flexDirection: { xs: 'column', sm: 'row' },
+          alignItems: { xs: 'flex-start', sm: 'center' },
+          justifyContent: 'space-between',
+          gap: { xs: 1, sm: 0 },
+          px: 2,
+          py: { xs: 1, sm: 0.5 },
+        }}>
         <Typography variant="h6" component="div">
           Loan Calculator
         </Typography>
