@@ -1,19 +1,22 @@
 import { Outlet, Link } from 'react-router-dom';
+import { Button } from '@mui/material';
+import Header from './components/Header';
+import './App.css';
 
 export default function App() {
   return (
-    <div>
-      <header className="p-4 bg-blue-600 text-white flex justify-between items-center">
-        <h1 className="text-xl font-semibold">My App</h1>
-        <nav className="space-x-4">
-          <Link to="/">Home</Link>
-          <Link to="/about">About</Link>
-        </nav>
+    <>
+      <header>
+        <Header>
+          <Button color="inherit" component={Link} to="/">Home</Button>
+          <Button color="inherit" component={Link} to="/exchange">Exchange Rates</Button>
+          <Button color="inherit" component={Link} to="/about">About</Button>
+        </Header>
       </header>
 
-      <main className="p-4">
+      <main>
         <Outlet />
       </main>
-    </div>
+    </>
   );
 }
