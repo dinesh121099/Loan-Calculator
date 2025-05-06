@@ -15,17 +15,14 @@ const Header = ({ children }) => {
   return (
     <AppBar position="static" color="primary" elevation={2}>
       <Toolbar sx={{ display: 'flex', justifyContent: 'space-between' }}>
-        {/* Left Side: Title */}
         <Typography variant="h6" component="div">
           Loan Calculator
         </Typography>
 
-        {/* Middle: Nav Links injected via props */}
         <Box sx={{ display: 'flex', gap: 2 }}>
           {children}
         </Box>
 
-        {/* Right Side: Theme Toggle */}
         <Box sx={{ display: 'flex', alignItems: 'center' }}>
           <IconButton color="inherit" onClick={toggleTheme}>
             {mode === 'dark' ? <Brightness7 /> : <Brightness4 />}

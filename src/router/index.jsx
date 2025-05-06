@@ -2,6 +2,7 @@ import { createBrowserRouter } from 'react-router-dom';
 import App from '../App.jsx';
 import NotFound from '../pages/NotFound'; 
 import Home from '../pages/Home.jsx';
+import CurrencyConverter from '../pages/CurrencyConverter.jsx';
 
 const router = createBrowserRouter([
   {
@@ -11,6 +12,10 @@ const router = createBrowserRouter([
       {
         index: true,
         element: <Home />,
+      },
+      {
+        path: 'exchange',
+        element: <CurrencyConverter/>,
       }
     ],
   },
