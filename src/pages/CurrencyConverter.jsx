@@ -42,7 +42,13 @@ import {
     }
   
     return (
-      <Paper sx={{ padding: 4, marginTop: 2 }}>
+      <Paper sx={{
+        p: { xs: 2, sm: 4 },
+        mt: { xs: 4, sm: 8 },
+        mx: 'auto',
+        maxWidth: 600,
+        textAlign: 'center',
+      }}>
         <Typography variant="h4" gutterBottom>
           Currency Converter
         </Typography>
@@ -54,6 +60,8 @@ import {
               value={fromCurrency}
               label="From"
               onChange={(e) => setFromCurrency(e.target.value)}
+              size="small"
+              sx={{ width: 150 }}
             >
               {Object.keys(conversionRates).map((cur) => (
                 <MenuItem key={cur} value={cur}>
@@ -69,6 +77,8 @@ import {
               value={toCurrency}
               label="To"
               onChange={(e) => setToCurrency(e.target.value)}
+              size="small"
+              sx={{ width: 150 }}
             >
               {Object.keys(conversionRates).map((cur) => (
                 <MenuItem key={cur} value={cur}>
@@ -83,6 +93,8 @@ import {
             type="number"
             value={amount}
             onChange={(e) => setAmount(e.target.value)}
+            size="small"
+            sx={{ width: 150 }}
           />
         </Box>
   

@@ -5,7 +5,13 @@ const NotFound = () => {
   const navigate = useNavigate();
 
   return (
-    <Paper sx={{ padding: 4, marginTop: 8, textAlign: 'center' }}>
+    <Paper sx={{
+      p: { xs: 2, sm: 4 },
+      mt: { xs: 4, sm: 8 },
+      mx: 'auto',
+      maxWidth: 600,
+      textAlign: 'center',
+    }}>
       <Typography variant="h2" color="error" gutterBottom>
         404
       </Typography>

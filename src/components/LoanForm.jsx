@@ -57,8 +57,14 @@ import {
     }
   
     return (
-      <Paper sx={{ padding: 4, marginTop: 2 }}>
-        <Typography variant="h4" gutterBottom>
+      <Paper sx={{
+        p: { xs: 2, sm: 4 },
+        mt: { xs: 4, sm: 8 },
+        mx: 'auto',
+        maxWidth: 600,
+        textAlign: 'center',
+      }}>
+        <Typography variant="h5" gutterBottom>
           Loan Calculator Dashboard
         </Typography>
   
@@ -67,16 +73,22 @@ import {
             label="Loan Amount"
             value={amount}
             onChange={(e) => setAmount(e.target.value)}
+            size="small"
+            sx={{ width: 150 }}
           />
           <TextField
             label="Interest Rate (%)"
             value={rate}
             onChange={(e) => setRate(e.target.value)}
+            size="small"
+            sx={{ width: 150 }}
           />
           <TextField
             label="Term (Years)"
             value={term}
             onChange={(e) => setTerm(e.target.value)}
+            size="small"
+            sx={{ width: 150 }}
           />
         </Box>
   
